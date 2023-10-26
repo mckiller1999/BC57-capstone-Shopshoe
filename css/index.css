@@ -36,9 +36,6 @@ header .container .title-header a {
 .nav-menu .container ul {
   padding-left: 0;
 }
-.nav-menu .container ul li a#home {
-  margin-left: 0;
-}
 .nav-menu .container ul li a#home::after {
   content: "";
   position: absolute;
