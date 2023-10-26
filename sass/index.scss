@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1230px;
+}
+
+header {
+  background: #000;
+  height: 70px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    .logo-header {
+      img {
+        width: 116px;
+        height: 32px;
+        top: 10px;
+        left: 24px;
+      }
+    }
+    .title-header {
+      img {
+        cursor: pointer;
+      }
+      a {
+        color: #fff;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.nav-menu {
+  .container {
+    ul {
+      padding-left: 0;
+      li {
+        a#home {
+          margin-left: 0;
+          &::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color: #000;
+            bottom: 0px;
+            left: 0;
+            transition: width 0.5s;
+          }
+        }
+        a {
+          text-align: center;
+          position: relative;
+          margin-left: 20px;
+          &::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 0px;
+            background-color: #000;
+            bottom: 0px;
+            left: 0;
+            transition: width 0.5s;
+          }
+          &:hover {
+            color: #000;
+            &::after {
+              width: 100%;
+              transition: width 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.slideShow {
+  #carouselExample {
+    .carousel-item {
+      background: url(../img/image\ 6.png) no-repeat bottom center;
+      background-size: 150%;
+      .carousel-content {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .carousel-content-body {
+          text-align: left;
+          margin-bottom: 70px;
+        }
+      }
+    }
+  }
+}
+
+.product {
+  background: #cbc4c4;
+  .container {
+    .row {
+      .item {
+        .card.item-content {
+          box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+          -webkit-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+          -moz-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+          margin: 10px;
+          padding: 20px;
+          // .item-title {
+          // }
+          .item-info {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}
