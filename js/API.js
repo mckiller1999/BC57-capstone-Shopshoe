@@ -25,7 +25,7 @@ function loadDataAPI(idParam) {
   promise.then(function (res) {
     //console.log(res.data.content);
     createFormItems(res.data.content);
-    sizeItem(res.data.content.size);
+    // sizeItem(res.data.content.size);
   });
   promise.catch(function (err) {
     console.log(err);
