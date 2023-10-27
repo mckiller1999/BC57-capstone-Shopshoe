@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1230px;
+}
+
+header {
+  background: #000;
+  height: 70px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+header .container .logo-header img {
+  width: 116px;
+  height: 32px;
+  top: 10px;
+  left: 24px;
+}
+header .container .title-header img {
+  cursor: pointer;
+}
+header .container .title-header a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.nav-menu .container ul {
+  padding-left: 0;
+}
+.nav-menu .container ul li a#home::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  bottom: 0px;
+  left: 0;
+  transition: width 0.5s;
+}
+.nav-menu .container ul li a {
+  text-align: center;
+  position: relative;
+  margin-left: 20px;
+}
+.nav-menu .container ul li a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0px;
+  background-color: #000;
+  bottom: 0px;
+  left: 0;
+  transition: width 0.5s;
+}
+.nav-menu .container ul li a:hover {
+  color: #000;
+}
+.nav-menu .container ul li a:hover::after {
+  width: 100%;
+  transition: width 0.5s;
+}
+
+.slideShow #carouselExample .carousel-item {
+  background: url(../img/image\ 6.png) no-repeat bottom center;
+  background-size: 150%;
+}
+.slideShow #carouselExample .carousel-item .carousel-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.slideShow #carouselExample .carousel-item .carousel-content .carousel-content-body {
+  text-align: left;
+  margin-bottom: 70px;
+}
+
+.product {
+  background: #cbc4c4;
+}
+.product .container .row .item .card.item-content {
+  box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+  -webkit-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+  -moz-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+  margin: 10px;
+  padding: 20px;
+}
+.product .container .row .item .card.item-content .item-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}/*# sourceMappingURL=index.css.map */
