@@ -1,0 +1,46 @@
+// @import "./themes/variable.scss";
+// @import "./component/component";
+// @import "./base/base";
+#info-item {
+    background: gray;
+    padding: 40px 0;
+    .container {
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .img-item {
+            display: flex;
+            justify-content: center;
+            img {
+                width: 100%;
+            }
+        }
+        .product-content {
+            width: 50%;
+            a {
+                font-weight: bold;
+                cursor: pointer;
+                color: black;
+                text-decoration: none;
+            }
+            .item-description {
+                width: 50%;
+                height: 80px;
+                overflow: hidden;
+            }
+            #size-item {
+                margin: 10px 0;
+                width: 35%;
+                height: 50px;
+                overflow: hidden;
+            }
+            .select-value {
+                margin: 10px 0;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+            }
+        }
+    }
+}

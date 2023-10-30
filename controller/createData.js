@@ -1,10 +1,10 @@
 /*----------------------index----------------------*/
 
 function createItem(arrItem) {
-  var output = "";
-  for (var i = 0; i < 9; i++) {
-    var item = arrItem[i];
-    output += `
+    var output = "";
+    for (var i = 0; i < 9; i++) {
+        var item = arrItem[i];
+        output += `
       <div id=${item.id} class="item col-lg-4 col-md-6 col-sm-12" >
       <div class="card item-content " >
     <img src=${item.image} class="card-img-top" alt="img-item">
@@ -21,116 +21,152 @@ function createItem(arrItem) {
   </div>
   </div>
       `;
-  }
+    }
 
-  document.querySelector("#productItem").innerHTML = output;
-  return output;
+    document.querySelector("#productItem").innerHTML = output;
+    return output;
 }
 
 /*----------------------detail----------------------*/
 
 function createFormItems(data) {
-  var output = "";
+    var output = "";
 
-  var output = `<div class="img-item w-50" >
+    var output = `<div class="img-item w-50" >
       <img src=${data.image}  alt="item-image" />
     </div>
     <div class="product-content">
             <h2>${data.name}</h2>
-            <p>
+            <p class = 'item-description'>
               ${data.description}
             </p>
+            <a class='show1'>Show more</a>
             <h3>Available Size</h3>
             <div id="size-item">;
   </div>
-            <h3 id="price">${data.price}$</h3>
+  <a class='show2'>Show more</a>
+            <h3 id="price" class='mt-2'>${data.price}$</h3>
             <div class="select-value">
-              <input class="btn btn-success" type="button" id='add' value="+" />
+              <input class="btn btn-primary" type="button" id='add' value="+" />
               <span id='vl-item' class='mx-2'>1</span>
-              <input class="btn btn-danger" type="button" id='remove' value="-" />
+              <input class="btn btn-primary" type="button" id='remove' value="-" />
             </div>
             <div id="btn-buy">
-              <button class="btn btn-info" id="success-${data.id}">ADD TO CART</button>
+              <button class="btn btn-primary" id="success-${data.id}">ADD TO CART</button>
             </div>
           </div>
     `;
 
-  document.querySelector("#item-content").innerHTML = output;
-  //tạo input size
-  sizeItem(data.size);
-  //lấy value size khi nhấn chọn
-  getSize(data.size);
-  //set sự kiện btn tăng giảm item
-  document.querySelector("#add").onclick = function () {
-    var vl = +document.querySelector("#vl-item").innerHTML;
+    document.querySelector("#item-content").innerHTML = output;
+    //tạo input size
+    sizeItem(data.size);
+    getSize(data.size);
+    //console.log(getSize(data.size));
 
-    vl++;
+    document.querySelector(".show1").onclick = function() {
+        var info = document.querySelector(".item-description");
+        if (info.style.height === "80px") {
+            info.style.removeProperty("overflow");
+            info.style.height = "100%";
+        } else {
+            info.style.height = "80px";
+            info.style.overflow = "hidden";
+        }
+    };
+    document.querySelector(".show2").onclick = function() {
+        var info = document.querySelector("#size-item");
+        if (info.style.height === "50px") {
+            info.style.removeProperty("overflow");
+            info.style.height = "100%";
+        } else {
+            info.style.height = "50px";
+            info.style.overflow = "hidden";
+        }
+    };
 
-    document.querySelector("#vl-item").innerHTML = vl;
-  };
-  document.querySelector("#remove").onclick = function () {
-    var vl = +document.querySelector("#vl-item").innerHTML;
-    vl--;
-    if (vl === 0) {
-      return;
-    }
+    //set sự kiện btn tăng giảm item
+    document.querySelector("#add").onclick = function() {
+        var vl = +document.querySelector("#vl-item").innerHTML;
 
-    document.querySelector("#vl-item").innerHTML = vl;
-  };
+        vl++;
 
-  //lấy data item khi nhấn buy
-  document.querySelector(`#success-${data.id}`).onclick = function () {
-    var name = data.name;
-    var price = data.price;
-    var valItem = +document.querySelector("#vl-item").innerHTML;
-    var total = valItem * price;
+        document.querySelector("#vl-item").innerHTML = vl;
+    };
+    document.querySelector("#remove").onclick = function() {
+        var vl = +document.querySelector("#vl-item").innerHTML;
+        vl--;
+        if (vl === 0) {
+            return;
+        }
 
-    console.log("name:", name, "quantity:", valItem, "price:", total + "$");
-  };
+        document.querySelector("#vl-item").innerHTML = vl;
+    };
 
-  return output;
+    //lấy data item khi nhấn buy
+    document.querySelector(`#success-${data.id}`).onclick = function() {
+        //lấy value size khi nhấn chọn
+
+        var name = data.name;
+        var price = data.price;
+        var valItem = +document.querySelector("#vl-item").innerHTML;
+        var total = valItem * price;
+
+        console.log(
+            "name:",
+            name,
+            "quantity:",
+            valItem,
+            "price:",
+            total + "$",
+            "size:",
+            getSize(data.size)
+        );
+    };
+
+    return output;
 }
 
 //tạo btn các size có trong data
 function sizeItem(arrSize) {
-  var output = "";
-  for (var i = 0; i < arrSize.length; i++) {
-    output += `<input type="radio" class="btn-check " name="options-outlined" id="success-outlined${i}" value=${arrSize[i]}  >
-    <label class="btn btn-success my-2" for="success-outlined${i}">${arrSize[i]}</label>`;
-  }
+    var output = "";
+    for (var i = 0; i < arrSize.length; i++) {
+        output += `<input type="radio" class="btn-check " name="options-outlined" id="success-outlined${i}" value=${arrSize[i]}  >
+    <label class="btn btn-outline-primary my-2" for="success-outlined${i}">${arrSize[i]}</label>
+    `;
+    }
 
-  //console.log(output);
-  document.querySelector("#size-item").innerHTML = output;
+    //console.log(output);
+    document.querySelector("#size-item").innerHTML = output;
 
-  return output;
+    return output;
 }
 
 // lấy value khi nhấn size
 function getSize(arrSize) {
-  var res = 0;
-  for (var i = 0; i < arrSize.length; i++) {
-    (function (i) {
-      var vl = document.querySelector(`#success-outlined${i}`);
+    for (var i = 0; i < arrSize.length; i++) {
+        var res = 0;
+        (function(j) {
+            var vl = document.querySelector(`#success-outlined${j}`);
 
-      vl.addEventListener("click", function () {
-        vl.classList.add("active");
-        res = +vl.value;
-        console.log("size:", res);
-        return res;
-      });
-    })(i);
-  }
+            vl.addEventListener("click", function() {
+                vl.classList.add("active");
+                res = +vl.value;
+                console.log("size:", res);
+                return res;
+            });
+        })(i);
+    }
 }
 
 /*----------------------res ---------------------- */
 //đổi giá trị pass thành text và ngược lại
 function changeVal(id) {
-  var passwordInput = document.querySelector(id).type;
+    var passwordInput = document.querySelector(id).type;
 
-  if (passwordInput === "password") {
-    passwordInput = "text";
-  } else {
-    passwordInput = "password";
-  }
-  document.querySelector(id).type = passwordInput;
+    if (passwordInput === "password") {
+        passwordInput = "text";
+    } else {
+        passwordInput = "password";
+    }
+    document.querySelector(id).type = passwordInput;
 }

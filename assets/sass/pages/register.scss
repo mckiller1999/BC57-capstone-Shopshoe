@@ -1,0 +1,15 @@
+// @import "./themes/variable.scss";
+// @import "./component/component";
+// @import "./base/base";
+.register {
+    .container {
+        #formBody {
+            display: flex;
+            box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+            -webkit-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+            -moz-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+            margin: 10px;
+            padding: 40px;
+        }
+    }
+}
