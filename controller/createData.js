@@ -32,10 +32,14 @@ function createItem(arrItem) {
 function createFormItems(data) {
     var output = "";
 
-    var output = `<div class="img-item w-50" >
-      <img src=${data.image}  alt="item-image" />
+    var output = `
+    
+    <div class='card p-4'>
+    
+    <div class="img-item card w-100" >
+      <img src=${data.image}  alt="item-image" class='w-75' />
     </div>
-    <div class="product-content">
+    <div class="product-content mt-5">
             <h2>${data.name}</h2>
             <p class = 'item-description'>
               ${data.description}
@@ -55,6 +59,7 @@ function createFormItems(data) {
               <button class="btn btn-primary" id="success-${data.id}">ADD TO CART</button>
             </div>
           </div>
+          </div>
     `;
 
     document.querySelector("#item-content").innerHTML = output;
@@ -67,7 +72,7 @@ function createFormItems(data) {
         var info = document.querySelector(".item-description");
         if (info.style.height === "80px") {
             info.style.removeProperty("overflow");
-            info.style.height = "100%";
+            info.style.height = "150px";
         } else {
             info.style.height = "80px";
             info.style.overflow = "hidden";
@@ -77,7 +82,7 @@ function createFormItems(data) {
         var info = document.querySelector("#size-item");
         if (info.style.height === "50px") {
             info.style.removeProperty("overflow");
-            info.style.height = "100%";
+            info.style.height = "100px";
         } else {
             info.style.height = "50px";
             info.style.overflow = "hidden";
