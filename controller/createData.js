@@ -34,7 +34,7 @@ function createFormItems(data) {
 
     var output = `
     
-    <div class='card p-4'>
+    <div class='card p-4 ' id='body-item'>
     
     <div class="img-item card w-100" >
       <img src=${data.image}  alt="item-image" class='w-75' />
@@ -58,6 +58,7 @@ function createFormItems(data) {
             <div id="btn-buy">
               <button class="btn btn-primary" id="success-${data.id}">ADD TO CART</button>
             </div>
+          </div>
           </div>
           </div>
     `;
@@ -115,6 +116,7 @@ function createFormItems(data) {
         var price = data.price;
         var valItem = +document.querySelector("#vl-item").innerHTML;
         var total = valItem * price;
+        var size = +document.querySelector("#size-item .btn-check.active").value;
 
         console.log(
             "name:",
@@ -124,11 +126,12 @@ function createFormItems(data) {
             "price:",
             total + "$",
             "size:",
-            getSize(data.size)
+            size
         );
+        alert("thêm vào giỏ hàng thành công");
     };
 
-    return output;
+    //return output;
 }
 
 //tạo btn các size có trong data
@@ -148,15 +151,21 @@ function sizeItem(arrSize) {
 
 // lấy value khi nhấn size
 function getSize(arrSize) {
+    var activeBtn; //tạo biến lưu trữ active
     for (var i = 0; i < arrSize.length; i++) {
-        var res = 0;
         (function(j) {
+            var res = 0;
             var vl = document.querySelector(`#success-outlined${j}`);
-
             vl.addEventListener("click", function() {
+                // btn hiện tại đã đc active thì xóa active cũ
+                if (activeBtn) {
+                    activeBtn.classList.remove("active");
+                }
+                activeBtn = vl;
                 vl.classList.add("active");
+                // console.log(vl);
                 res = +vl.value;
-                console.log("size:", res);
+                // console.log("size:", res);
                 return res;
             });
         })(i);
