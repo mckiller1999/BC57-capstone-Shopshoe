@@ -1,1 +1,10 @@
 //css dùng chung cho tất cả các trang
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1230px;
+}
