@@ -1,15 +1,238 @@
-// @import "./themes/variable.scss";
+@import "../themes/variable.scss";
 // @import "./component/component";
-// @import "./base/base";
-.register {
-    .container {
-        #formBody {
-            display: flex;
-            box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
-            -webkit-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
-            -moz-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
-            margin: 10px;
-            padding: 40px;
+@import "../base/base.scss";
+
+.register__body{
+    background-color: rgba(133, 114, 46, 0.462);
+    
+    width: 100%;
+    overflow: hidden;
+    
+    
+    .register__img{
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+       
+        img{
+            width: 100%;
+            max-width: 750px;
+            object-fit: cover;
+            min-height: 100%;
+            @media screen and (max-width: 1200px) {
+                min-width: 500px;
+                
+            }
+            @media screen and (max-width: 991px) {
+                //display: block;
+                width: 0;
+                height: 0;
+                min-width: 0;
+                
+                
+            }
         }
+    
+    }
+    .register__content {
+        margin: auto;
+        padding-right: 50px;
+        @media screen and (max-width: 1354px) {
+            padding-right: 0;
+        
+        }
+        @media screen and (max-width: 991px) {
+            margin: 0 auto;
+            width: 80%;
+        
+        }
+        @media screen and (max-width: 620px) {
+            margin: 0 auto;
+            width: 80%;
+        
+        }
+        @media screen and (max-width: 501px) {
+            margin: 0 auto;
+            width: 90%;
+        
+        }
+        
+
+        
+        h1{
+            // color:  $c1-text-warning;
+            // font-size: 40px;
+            // font-weight: $fw-semibold;
+            @media screen and (max-width: 776px) {
+                margin-left: 60px;
+                
+            
+            }
+
+        }
+        .register__form{
+            form{
+                
+                .form__content{
+                    display: flex;
+                    justify-content: center;
+                    @media screen and (max-width: 1354px) {
+                        display: block;
+                        width: 50%;
+                        margin: 0 auto;
+               
+                    }
+                    @media screen and (max-width: 776px) {
+                        margin: 0 auto;
+                        width: 50%;
+                    
+                    }
+                    
+
+                    
+                    
+                    .form-left{
+                    @media screen and (max-width: 1357px) {
+                        margin-left: 0 !important;
+                            
+                            
+                    }
+
+                        .form-input{
+                            margin: 40px 0;
+                            input{
+                                width: 370px;
+                                height: 50px;
+                                border-radius: 50px;
+                                padding: 20px;
+                            }
+                            
+                            p{
+        
+                            }
+                            #icon-pass{
+                                position: absolute;
+                                top: 20px;
+                                right: 10px;
+                                @media screen and (max-width: 1354px) {
+                                    right: 10px;
+                                }
+                                @media screen and (max-width: 1200px) {
+                                    right: -50px;
+                                    
+                                }
+                                @media screen and (max-width: 995px) {
+                                    right: -100px;
+                                    
+                                }
+                              
+                                @media screen and (max-width: 991px) {
+                                    right: 20px;
+                                    
+                                }
+                                @media screen and (max-width: 900px) {
+                                    right: -30px;
+                                    
+                                }
+                                @media screen and (max-width: 800px) {
+                                    right: -60px;
+                                    
+                                }
+                                @media screen and (max-width: 700px) {
+                                    right: -100px;
+                                    
+                                }
+                                @media screen and (max-width: 600px) {
+                                    right: -100px;
+                                    
+                                }
+                                @media screen and (max-width: 500px) {
+                                    right: -130px;
+                                    
+                                }
+                            }
+                        }
+                        .input-pass{
+                            position: relative;
+                        }
+    
+                    }
+                    .form-right{
+                        .form-input{
+                            input{
+                                margin-top: 40px;
+                                width: 370px;
+                                height: 50px;
+                                border-radius: 50px;
+                                padding: 20px;
+                            }
+                            
+                            p{
+        
+                            }
+                            
+                        }
+                        #gender{
+                            display: flex;
+                            justify-content: space-between;
+                            line-height: 50px;
+                            align-items: center;
+                            .form-check-input{
+                                margin: 40px 0;
+                                height: 25px;
+                                width: 25px;
+                                padding: 15px;
+                                &:checked{
+                                    background: #85722f;
+                                    border-color: #85722f;
+                                }
+                            }
+                            label{
+                                font-size: 20px;
+        
+                            }
+                        }
+                        
+    
+                    }
+
+                }
+                .submit{
+                    button{
+                        width: 370px;
+                        height: 50px;
+                        border-radius: 50px;
+                        background-color: $c1-bg-warning;
+                        border-color: $c1-bg-warning;
+                        @media screen and (max-width: 1130px) {
+                            margin-left: 50px;
+                        }
+                        @media screen and (max-width: 1020px) {
+                            margin-left: 70px;
+                        }
+                        @media screen and (max-width: 991px) {
+                            margin-left: 0px;
+                        }
+                        @media screen and (max-width: 776px) {
+                            margin-left: 60px;
+                            
+                        
+                        }
+                        &:hover{
+                            background-color: #85722f6f;
+                            border-color: #85722f6f;
+                            color: $c0-text-dark;
+                            transition: all .5s;
+                            font-weight: $fz-3xl;
+                        }
+                    }
+                }
+                
+            }
+        }
+    
     }
 }
+
+
+

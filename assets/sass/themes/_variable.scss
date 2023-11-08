@@ -1,1 +1,63 @@
 // tạo biến
+
+
+//color
+    //color-text
+    $c0-text-dark: #000;
+    $c0-text-light: #fff;
+    $c0-text-secondary: #6c757d;
+    $c0-text-white: #f7f7f7;
+
+    $c0-text-warning: #ffc107;
+    $c1-text-warning: #85722f;
+
+    //color-background
+    $c0-bg-dark: #000;
+    $c0-bg-light: #fff;
+    $c0-bg-secondary: #6c757d;
+    $c0-bg-white: #f7f7f7;
+
+    $c0-bg-warning: #ffc107;
+    $c1-bg-warning: #85722f;
+
+//font-size
+$fz-small: 10px;
+$fz-base: 16px;
+$fz-xl: 18px;
+$fz-2xl: 20px;
+$fz-3xl: 30px;
+$fz-4xl: 40px;
+$fz-5xl: 50px;
+$fz-6xl: 60px;
+
+//font-weight
+$fw-light: 300;
+$fw-regular: 400;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+/* Định nghĩa mixin */
+
+@mixin text($fz: $fz-base, $fw: $fw-regular, $c: $c0-text-dark){
+    font-size: $fz;
+    font-weight: $fw;
+    color: $c;
+}
+
+@mixin button($fz, $fw, $c, $bg, $pd, $border, $border-radius, $bg-hover, $c-hover){
+    //font-size, font-weight, color, background, padding, border, cover:hover, background-hover, border-radius
+
+    @include text($fz, $fw, $c );
+    background: $bg;
+    padding: $pd;
+    border: $border;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover{
+        background: $bg-hover;
+        color: $c-hover;
+        transition: all 0.5s;
+    }
+
+}
