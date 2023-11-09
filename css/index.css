@@ -127,34 +127,34 @@ header .container .title-header a:hover {
   background-size: cover;
 }
 .product .container .product-list .item-0 {
-  animation: fade-down 1s;
+  animation: fade-down 0.1s;
 }
 .product .container .product-list .item-1 {
-  animation: fade-down 2s;
+  animation: fade-down 1.1s;
 }
 .product .container .product-list .item-2 {
-  animation: fade-down 3s;
+  animation: fade-down 2.1s;
 }
 .product .container .product-list .item-3 {
-  animation: fade-down 4s;
+  animation: fade-down 3.1s;
 }
 .product .container .product-list .item-4 {
-  animation: fade-down 5s;
+  animation: fade-down 4.1s;
 }
 .product .container .product-list .item-5 {
-  animation: fade-down 6s;
+  animation: fade-down 5.1s;
 }
 .product .container .product-list .item-6 {
-  animation: fade-down 7s;
+  animation: fade-down 6.1s;
 }
 .product .container .product-list .item-7 {
-  animation: fade-down 8s;
+  animation: fade-down 7.1s;
 }
 .product .container .product-list .item-8 {
-  animation: fade-down 9s;
+  animation: fade-down 8.1s;
 }
 .product .container .product-list .item-9 {
-  animation: fade-down 10s;
+  animation: fade-down 9.1s;
 }
 .product .container .product-list .item .card.item-content {
   box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
