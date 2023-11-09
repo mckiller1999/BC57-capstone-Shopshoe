@@ -275,7 +275,7 @@ footer {
 .cd-top--fade-out {
   opacity: 1;
 }
-
+//animation--------------------------------
 @keyframes fade-down {
   0% {
     transform: translateY(-200px);
@@ -284,5 +284,21 @@ footer {
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+//responsive-----------------
+@media screen and (max-width: 576px) {
+  .slideShow {
+    #carouselExample {
+      .carousel-item {
+        .carousel-content {
+          .carousel-content-body {
+            button {
+              font-size: $fz-small;
+            }
+          }
+        }
+      }
+    }
   }
 }

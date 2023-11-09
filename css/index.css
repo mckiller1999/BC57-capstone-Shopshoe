@@ -288,4 +288,9 @@ footer .copyright a:hover {
     transform: translateY(0px);
     opacity: 1;
   }
+}
+@media screen and (max-width: 576px) {
+  .slideShow #carouselExample .carousel-item .carousel-content .carousel-content-body button {
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=index.css.map */
