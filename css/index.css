@@ -1,0 +1,285 @@
+@charset "UTF-8";
+/* Định nghĩa mixin */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1230px;
+}
+
+header {
+  background: #000;
+  height: 60px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+header .container .logo-header img {
+  width: 116px;
+  height: 32px;
+  top: 8px;
+  left: 12px;
+}
+header .container .title-header img {
+  cursor: pointer;
+}
+header .container .title-header a {
+  color: #fff;
+  margin-right: 10px;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+header .container .title-header a:hover {
+  color: #85722f;
+  transition: all 0.5s;
+}
+
+.nav-menu .container ul {
+  padding-left: 0;
+}
+.nav-menu .container ul li a#home {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+.nav-menu .container ul li a#home::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  bottom: 0px;
+  left: 0;
+  transition: width 0.5s;
+}
+.nav-menu .container ul li a {
+  text-align: center;
+  position: relative;
+  margin-left: 20px;
+}
+.nav-menu .container ul li a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0px;
+  background-color: #000;
+  bottom: 0px;
+  left: 0;
+  transition: width 0.5s;
+}
+.nav-menu .container ul li a:hover {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+.nav-menu .container ul li a:hover::after {
+  width: 100%;
+  transition: width 0.5s;
+}
+
+.slideShow {
+  background-image: linear-gradient(#fff, #85722f);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 40px 0;
+}
+.slideShow #carouselExample .carousel-item {
+  background: url(/assets/img/image\ 6.png) no-repeat bottom center;
+  background-size: 150%;
+}
+.slideShow #carouselExample .carousel-item .carousel-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.slideShow #carouselExample .carousel-item .carousel-content .carousel-content-body {
+  text-align: left;
+  margin-bottom: 70px;
+}
+.slideShow #carouselExample .carousel-item .carousel-content .carousel-content-body button {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  background: #85722f;
+  padding: 10px 40px;
+  border: solid 1px transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.slideShow #carouselExample .carousel-item .carousel-content .carousel-content-body button:hover {
+  background: rgba(133, 114, 46, 0.462);
+  opacity: 3;
+}
+
+.product {
+  background-image: linear-gradient(#fff, #85722f);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.product .container .product-list .item-0 {
+  animation: fade-down 1s;
+}
+.product .container .product-list .item-1 {
+  animation: fade-down 2s;
+}
+.product .container .product-list .item-2 {
+  animation: fade-down 3s;
+}
+.product .container .product-list .item-3 {
+  animation: fade-down 4s;
+}
+.product .container .product-list .item-4 {
+  animation: fade-down 5s;
+}
+.product .container .product-list .item-5 {
+  animation: fade-down 6s;
+}
+.product .container .product-list .item-6 {
+  animation: fade-down 7s;
+}
+.product .container .product-list .item-7 {
+  animation: fade-down 8s;
+}
+.product .container .product-list .item-8 {
+  animation: fade-down 9s;
+}
+.product .container .product-list .item-9 {
+  animation: fade-down 10s;
+}
+.product .container .product-list .item .card.item-content {
+  box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+  -webkit-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+  -moz-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+}
+.product .container .product-list .item .card.item-content .card-body .item-title .card-title {
+  font-size: 20px;
+}
+.product .container .product-list .item .card.item-content .card-body .item-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.product .container .product-list .item .card.item-content .card-body .item-info .item-price {
+  font-size: 30px;
+  border: solid 1px transparent;
+  padding: 10px 30px;
+  width: 50%;
+  text-align: center;
+  background: #f7f7f7;
+  border-radius: 50px;
+  font-weight: bold;
+}
+.product .container .product-list .item .card.item-content .card-body .item-info a button {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  background: #85722f;
+  padding: 10px 40px;
+  border: solid 1px transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.product .container .product-list .item .card.item-content .card-body .item-info a button:hover {
+  background: rgba(133, 114, 46, 0.462);
+  opacity: 2;
+}
+
+footer .footer__content {
+  padding-top: 20px;
+}
+footer .footer__content .container {
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+}
+footer .footer__content .container .footer__item {
+  flex: 1;
+}
+footer .footer__content .container .footer__item h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+footer .footer__content .container .footer__item ul {
+  padding: 0;
+  list-style: none;
+}
+footer .footer__content .container .footer__item ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+footer .footer__content .container .footer__item ul li .a_red {
+  color: red;
+}
+footer .content0 {
+  background: rgba(133, 114, 46, 0.462);
+  padding-bottom: 20px;
+}
+footer .content1 {
+  background: rgba(133, 114, 46, 0.462);
+  padding-bottom: 20px;
+}
+footer .copyright {
+  border-top: solid 1px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background: #000;
+  color: #f7f7f7;
+}
+footer .copyright a {
+  text-decoration: none;
+  color: red;
+}
+footer .copyright a:hover {
+  text-decoration: underline;
+  transition: all 1s;
+}
+
+.backToTop {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  border: solid 1px #85722f;
+  background: #85722f;
+}
+.backToTop i {
+  color: #fff;
+}
+
+.cd-top--is-visible {
+  visibility: visible;
+  opacity: 0.5;
+}
+
+.cd-top--fade-out {
+  opacity: 1;
+}
+
+@keyframes fade-down {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=index.css.map */

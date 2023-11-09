@@ -1,144 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <title>Title</title>
+  <head>
+    <title>Register</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./detail.html" />
     <!-- link font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <!-- link css -->
-    <link rel="stylesheet" href="./assets/css/pages/index.css" />
-    <link rel="stylesheet" href="./assets/css/pages/register.css" />
-</head>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/register.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <!-- place navbar here -->
-        <div class="container">
-            <a href="./index.html" class="logo-header">
-                <img src="./assets/img/image 3.png " alt="logo" />
-            </a>
-            <div class="title-header">
-                <img class="img-cart" src="./assets/img/Group 1.png " alt="cart" />
-                <!-- <a id="login" href="#">Login</a>
-          <a id="register" href="#">Register</a> -->
-            </div>
+      <!-- place navbar here -->
+      <div class="container">
+        <a href="./index.html" class="logo-header">
+          <img src="./assets/img/image 3.png " alt="logo" />
+        </a>
+        <div class="title-header d-flex">
+          <img class="img-cart" src="./assets/img/Group 1.png " alt="cart" />
+
+          <a id="login" href="#">Login</a>
+          <a id="register" href="#">Register</a>
         </div>
+      </div>
     </header>
-    <section class="nav-menu">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- <section class="nav-menu">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
               <span class="navbar-toggler-icon"></span>
             </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a id="home" class="nav-link active" aria-current="page" href="./index.html">Home</a
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a
+                    id="home"
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./index.html"
+                    >Home</a
                   >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Men</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Woman</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Kid</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Sport</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </section>
-    <section class="register my-5">
-        <h1 class="text-center my-4">Register</h1>
-        <div class="container d-flex justify-content-center">
-            <form id="formBody">
-                <div class="form-left mx-4">
-                    <div class="mb-3">
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email address" />
-                        <p id="email-alert" class="text-danger ms-1"></p>
-                        <p id="email-alert2" class="text-danger ms-1"></p>
-                    </div>
-                    <div class="mb-3">
-                        <div class="ip-pass d-flex align-items-center">
-                            <input type="password" class="form-control" id="password" placeholder="Password" />
-                            <i class="op-eyes fa-solid fa-eye ms-1"></i>
-                        </div>
-                        <p id="password-alert" class="text-danger ms-1"></p>
-                        <p id="password-alert2" class="text-danger ms-1"></p>
-                    </div>
-                    <div class="mb-3">
-                        <div class="ip-passcf d-flex align-items-center">
-                            <input type="password" class="form-control" id="password-confirm" placeholder="Password confirm" />
-                        </div>
-                        <p id="confirm-alert" class="text-danger ms-1"></p>
-                        <p id="confirm-alert2" class="text-danger ms-1"></p>
-                    </div>
-                </div>
-                <div class="form-right mx-4">
-                    <div class="mb-3">
-                        <input type="name" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Name" />
-                        <p id="name-alert" class="text-danger ms-1"></p>
-                        <p id="name-alert2" class="text-danger ms-1"></p>
-                    </div>
-                    <div class="mb-3">
-                        <input type="number" class="form-control" id="phone" placeholder="phone number" />
-                        <p id="phone-alert" class="text-danger ms-1"></p>
-                        <p id="phone-alert2" class="text-danger ms-1"></p>
-                    </div>
-                    <div class="mb-3" id="gender">
-                        Gender: <br />
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="nam" checked />
-                        <label class="form-check-label" for="flexRadioDefault1">
-                Man
-              </label>
-                        <br />
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="nu" />
-                        <label class="form-check-label" for="flexRadioDefault1">
-                Woman
-              </label>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Woman</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Kid</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sport</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section> -->
 
-                        <p id="gender-alert" class="text-danger ms-1"></p>
-                    </div>
-                    <div class="submit">
-                        <button type="submit" id="submit" class="btn btn-primary">
-                Submit
-              </button>
-                    </div>
-                </div>
-            </form>
+    <section class="register__body">
+      <div class="row">
+        <div class="col-12 col-lg-5">
+          <div class="register__img">
+            <img src="./assets/img/banner_register.jpg" alt="" />
+          </div>
         </div>
+        <div class="col-12 col-lg-7">
+          <div class="register__content">
+            <h1 class="text-center pt-5">Register</h1>
+            <div class="register__form">
+              <form id="formBody">
+                <div class="form__content">
+                  <div class="form-left mx-4">
+                    <div class="form-input mb-3">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        aria-describedby="emailHelp"
+                        placeholder="Email address"
+                      />
+                    </div>
+                    <p id="email-alert" class="text-danger ms-1"></p>
+                    <p id="email-alert2" class="text-danger ms-1"></p>
+                    <div class="form-input mb-3 input-pass">
+                      <div class="ip-pass">
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="password"
+                          placeholder="Password"
+                        />
+                        <i
+                          id="icon-pass"
+                          class="op-eyes fa-solid fa-eye ms-1"
+                        ></i>
+                      </div>
+                      <p id="password-alert" class="text-danger ms-1"></p>
+                      <p id="password-alert2" class="text-danger ms-1"></p>
+                    </div>
+                    <div class="form-input mb-3">
+                      <div class="ip-passcf">
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="password-confirm"
+                          placeholder="Password confirm"
+                        />
+                      </div>
+                      <p id="confirm-alert" class="text-danger ms-1"></p>
+                      <p id="confirm-alert2" class="text-danger ms-1"></p>
+                    </div>
+                  </div>
+                  <div class="form-right">
+                    <div class="form-input mb-3">
+                      <input
+                        type="name"
+                        class="form-control"
+                        id="name"
+                        aria-describedby="emailHelp"
+                        placeholder="Name"
+                      />
+                    </div>
+                    <p id="name-alert" class="text-danger ms-1"></p>
+                    <p id="name-alert2" class="text-danger ms-1"></p>
+                    <div class="form-input mb-3">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="phone"
+                        placeholder="Phone number"
+                      />
+                    </div>
+                    <p id="phone-alert" class="text-danger ms-1"></p>
+                    <p id="phone-alert2" class="text-danger ms-1"></p>
+                    <div class="form-input mb-3" id="gender">
+                      Gender: <br />
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="nam"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Man
+                      </label>
+                      <br />
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="flexRadioDefault"
+                        id="nu"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Woman
+                      </label>
+
+                      <p id="gender-alert" class="text-danger ms-1"></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="submit text-center py-4">
+                  <button type="submit" id="submit" class="btn btn-primary">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <!-- place footer here -->
-    </footer>
     <!-- axios -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js" integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"
+      integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
     <!-- <script src="./js/index.js"></script> -->
     <script src="./model/Prototype.js"></script>
     <script src="./controller/API.js"></script>
     <script src="./controller/createData.js"></script>
     <script src="./assets/lib/val.js"></script>
     <script src="./controller/js/register.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,133 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <title>Title</title>
+  <head>
+    <title>Detail</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
     <!-- link css -->
-    <link rel="stylesheet" href="./assets/css/pages/index.css" />
-    <link rel="stylesheet" href="./assets/css/pages/detail.css" />
-</head>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/detail.css" />
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <!-- place navbar here -->
-        <div class="container">
-            <a href="./index.html" class="logo-header">
-                <img src="./assets/img/image 3.png " alt="logo" />
-            </a>
-            <div class="title-header">
-                <img class="img-cart" src="./assets/img/Group 1.png" alt="cart" />
-                <a id="login" href="#">Login</a>
-                <a id="register" href="./register.html">Register</a>
-            </div>
+      <!-- place navbar here -->
+      <div class="container">
+        <a href="./index.html" class="logo-header">
+          <img src="./assets/img/image 3.png " alt="logo" />
+        </a>
+        <div class="title-header d-flex">
+          <img class="img-cart" src="./assets/img/Group 1.png" alt="cart" />
+          <p class="me-3">(<span id="quanTity">0</span>)</p>
+          <a id="login" href="#">Login</a>
+          <a id="register" href="./register.html">Register</a>
         </div>
+      </div>
     </header>
     <section class="nav-menu">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
               <span class="navbar-toggler-icon"></span>
             </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./index.html">Home</a
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./index.html"
+                    >Home</a
                   >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Men</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Woman</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Kid</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Sport</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Woman</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Kid</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sport</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
     </section>
     <section id="info-item">
-        <div class="container-fluid">
-            <div class="container" id="item-content">
-                <!-- data content is here -->
-            </div>
-            <div class="container" id="hot-item">
-                <div class="card">
-                    <h2 class="text-center">Hot this mounth</h2>
-                    <div class="row-items">
-                        <div class="card item-hot m-4 w-50">
-                            <div id="hot-item1">
-                                <h5>1 ADIDAS</h5>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                                <img src="./assets/img/image 4.png" alt="" class="w-100" />
-                                <button class="btn btn-primary">Buy Now</button>
-                            </div>
-                        </div>
-                        <div class="card item-hot m-4 w-50">
-                            <div id="hot-item2">
-                                <h5>2 ADIDAS</h5>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                                <img src="./assets/img/image 4.png" alt="" class="w-100" />
-                                <button class="btn btn-primary">Buy Now</button>
-                            </div>
-                        </div>
-                        <div class="card item-hot m-4 w-50">
-                            <div id="hot-item3">
-                                <h5>3 ADIDAS</h5>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                                <img src="./assets/img/image 4.png" alt="" class="w-100" />
-                                <button class="btn btn-primary">Buy Now</button>
-                            </div>
-                        </div>
-                        <div class="card item-hot m-4 w-50">
-                            <div id="hot-item4">
-                                <h5>3 ADIDAS</h5>
-                                <p>Lorem ipsum dolor sit amet.</p>
-                                <img src="./assets/img/image 4.png" alt="" class="w-100" />
-                                <button class="btn btn-primary">Buy Now</button>
-                            </div>
-                        </div>
-                    </div>
+      <div class="container-fluid">
+        <div class="container" id="item-content">
+          <!-- data content is here -->
+        </div>
+        <div class="container" id="hot-item">
+          <div class="card container">
+            <h2 class="text-center">-Hot this mounth-</h2>
+            <div class="row-items">
+              <div class="card item-hot-1 m-4 w-50">
+                <div id="hot-item1">
+                  <h5>1 ADIDAS</h5>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <img src="./assets/img/image 4.png" alt="" class="w-100" />
+                  <div
+                    class="hot-item-btm d-flex align-items-center justify-content-between"
+                  >
+                    <h4>250$</h4>
+                    <button class="btn">Buy Now</button>
+                  </div>
                 </div>
+              </div>
+              <div class="card item-hot-2 m-4 w-50">
+                <div id="hot-item2">
+                  <h5>2 ADIDAS</h5>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <img src="./assets/img/image 4.png" alt="" class="w-100" />
+                  <div
+                    class="hot-item-btm d-flex align-items-center justify-content-between"
+                  >
+                    <h4>250$</h4>
+                    <button class="btn">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card item-hot-3 m-4 w-50">
+                <div id="hot-item3">
+                  <h5>3 ADIDAS</h5>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <img src="./assets/img/image 4.png" alt="" class="w-100" />
+                  <div
+                    class="hot-item-btm d-flex align-items-center justify-content-between"
+                  >
+                    <h4>250$</h4>
+                    <button class="btn">Buy Now</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card item-hot-4 m-4 w-50">
+                <div id="hot-item4">
+                  <h5>4 ADIDAS</h5>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                  <img src="./assets/img/image 4.png" alt="" class="w-100" />
+                  <div
+                    class="hot-item-btm d-flex align-items-center justify-content-between"
+                  >
+                    <h4>250$</h4>
+                    <button class="btn">Buy Now</button>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+      <div class="container">
+        <!-- data content is here -->
+      </div>
     </section>
-    <h2 class="text-center my-5">Maybe You Like</h2>
-    <section class="product my-5">
-        <div class="container text-center">
-            <div class="row" id="productItem"></div>
-        </div>
+    <h2 class="text-center my-5">-Maybe You Like-</h2>
+    <section class="product py-5">
+      <div class="container text-center">
+        <div class="row product-list" id="productItem"></div>
+      </div>
     </section>
     <footer>
-        <!-- place footer here -->
+      <!-- place footer here -->
+      <div class="footer__content content0 py-5">
+        <div class="container">
+          <div class="footer__item">
+            <h3>GET HELP</h3>
+            <ul>
+              <li><a href="">Contact us</a></li>
+              <li><a href="">Shopping</a></li>
+              <li><a href="">NIKEiD</a></li>
+              <li><a href="">Nike+</a></li>
+            </ul>
+          </div>
+          <div class="footer__item">
+            <h3>ORDERS</h3>
+            <ul>
+              <li><a href="">Payment options</a></li>
+              <li><a href="">Shipping and delivery</a></li>
+              <li><a href="">Returns</a></li>
+            </ul>
+          </div>
+          <div class="footer__item">
+            <h3>REGISTER</h3>
+            <ul>
+              <li>
+                Create one account to manage everything you do with Nike, from
+                your shopping preferences to your Nike+ activity
+              </li>
+              <li><a class="a_red" href="">Learn more</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__content content1">
+        <div class="container">
+          <div class="footer__item">
+            <h3>EMAIL SIGN UP</h3>
+            <ul>
+              <li>
+                Be the first to know about new products and special offers
+              </li>
+              <li><a class="a_red" href="">Sign up now</a></li>
+            </ul>
+          </div>
+          <div class="footer__item">
+            <h3>GIFT CARDS</h3>
+            <ul>
+              <li>Give the gift that always fits</li>
+              <li><a class="a_red" href="">View cards</a></li>
+            </ul>
+          </div>
+          <div class="footer__item">
+            <h3>STORES NEAR YOU</h3>
+            <ul>
+              <li>Locate a Nike retail store or authorrized retaller.</li>
+              <li><a class="a_red" href="">Search</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright text-center">
+        © 2023 All Rights Reserved by
+        <a href="https://w3layouts.com/">W3Layouts.</a>
+      </div>
     </footer>
-    <!-- axios -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js" integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
     <!-- slick -->
 
     <!-- script -->
+    <!-- backtotop  -->
+    <a href="#" class="backToTop cd-top text-replace js-cd-top"
+      ><i class="fa fa-arrow-up"></i
+    ></a>
+    <!-- axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"
+      integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="././assets/lib/backToTop/util.js"></script>
+    <script src="././assets/lib/backToTop/main-backToTop.js"></script>
+
     <script src="./controller/API.js"></script>
     <script src="./controller/createData.js"></script>
     <script src="./controller/js/index.js"></script>
     <script src="./controller/js/detail.js"></script>
-</body>
-
+  </body>
 </html>

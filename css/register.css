@@ -1,0 +1,217 @@
+@charset "UTF-8";
+/* Định nghĩa mixin */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1230px;
+}
+
+.register__body {
+  background-color: rgba(133, 114, 46, 0.462);
+  width: 100%;
+  overflow: hidden;
+}
+.register__body .register__img {
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+.register__body .register__img img {
+  width: 100%;
+  max-width: 750px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .register__body .register__img img {
+    min-width: 500px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .register__body .register__img img {
+    width: 0;
+    height: 0;
+    min-width: 0;
+  }
+}
+.register__body .register__content {
+  margin: auto;
+  padding-right: 50px;
+}
+@media screen and (max-width: 1354px) {
+  .register__body .register__content {
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 991px) {
+  .register__body .register__content {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 620px) {
+  .register__body .register__content {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 501px) {
+  .register__body .register__content {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 776px) {
+  .register__body .register__content h1 {
+    margin-left: 60px;
+  }
+}
+.register__body .register__content .register__form form .form__content {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 1354px) {
+  .register__body .register__content .register__form form .form__content {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 776px) {
+  .register__body .register__content .register__form form .form__content {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1357px) {
+  .register__body .register__content .register__form form .form__content .form-left {
+    margin-left: 0 !important;
+  }
+}
+.register__body .register__content .register__form form .form__content .form-left .form-input {
+  margin: 40px 0;
+}
+.register__body .register__content .register__form form .form__content .form-left .form-input input {
+  width: 370px;
+  height: 50px;
+  border-radius: 50px;
+  padding: 20px;
+}
+.register__body .register__content .register__form form .form__content .form-left .form-input #icon-pass {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+@media screen and (max-width: 1354px) {
+  .register__body .register__content .register__form form .form__content .form-left .form-input #icon-pass {
+    right: 10px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .register__body .register__content .register__form form .form__content .form-left .form-input #icon-pass {
+    right: -50px;
+  }
+}
+@media screen and (max-width: 995px) {
+  .register__body .register__content .register__form form .form__content .form-left .form-input #icon-pass {
+    right: -100px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .register__body .register__content .register__form form .form__content .form-left .form-input #icon-pass {
+    right: 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .register__body .register__content .register__form form .form__content .form-left .form-input #icon-pass {
+    right: -30px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .register__body .register__content .register__form form .form__content .form-left .form-input #icon-pass {
+    right: -60px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .register__body .register__content .register__form form .form__content .form-left .form-input #icon-pass {
+    right: -100px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .register__body .register__content .register__form form .form__content .form-left .form-input #icon-pass {
+    right: -100px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .register__body .register__content .register__form form .form__content .form-left .form-input #icon-pass {
+    right: -130px;
+  }
+}
+.register__body .register__content .register__form form .form__content .form-left .input-pass {
+  position: relative;
+}
+.register__body .register__content .register__form form .form__content .form-right .form-input input {
+  margin-top: 40px;
+  width: 370px;
+  height: 50px;
+  border-radius: 50px;
+  padding: 20px;
+}
+.register__body .register__content .register__form form .form__content .form-right #gender {
+  display: flex;
+  justify-content: space-between;
+  line-height: 50px;
+  align-items: center;
+}
+.register__body .register__content .register__form form .form__content .form-right #gender .form-check-input {
+  margin: 40px 0;
+  height: 25px;
+  width: 25px;
+  padding: 15px;
+}
+.register__body .register__content .register__form form .form__content .form-right #gender .form-check-input:checked {
+  background: #85722f;
+  border-color: #85722f;
+}
+.register__body .register__content .register__form form .form__content .form-right #gender label {
+  font-size: 20px;
+}
+.register__body .register__content .register__form form .submit button {
+  width: 370px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #85722f;
+  border-color: #85722f;
+}
+@media screen and (max-width: 1130px) {
+  .register__body .register__content .register__form form .submit button {
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .register__body .register__content .register__form form .submit button {
+    margin-left: 70px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .register__body .register__content .register__form form .submit button {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 776px) {
+  .register__body .register__content .register__form form .submit button {
+    margin-left: 60px;
+  }
+}
+.register__body .register__content .register__form form .submit button:hover {
+  background-color: rgba(133, 114, 47, 0.4352941176);
+  border-color: rgba(133, 114, 47, 0.4352941176);
+  color: #000;
+  transition: all 0.5s;
+  font-weight: 30px;
+}/*# sourceMappingURL=register.css.map */

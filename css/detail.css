@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/* Định nghĩa mixin */
+#info-item {
+  background-image: linear-gradient(#fff, #85722f);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 40px 0;
+}
+#info-item .container-fluid {
+  display: flex;
+  flex-direction: column;
+}
+#info-item .container-fluid #item-content {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#info-item .container-fluid #item-content .card {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+  -webkit-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+  -moz-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+}
+#info-item .container-fluid #item-content .card .img-item {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  animation: pop-up 2s;
+}
+#info-item .container-fluid #item-content .card .product-content {
+  margin: 20px;
+  width: 50%;
+}
+#info-item .container-fluid #item-content .card .product-content a {
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+#info-item .container-fluid #item-content .card .product-content .item-description {
+  width: 50%;
+  height: 80px;
+  overflow: hidden;
+}
+#info-item .container-fluid #item-content .card .product-content #size-item {
+  margin: 10px 0;
+  width: 75%;
+  height: 50px;
+  overflow: hidden;
+}
+#info-item .container-fluid #item-content .card .product-content #size-item .btn-check:checked + .btn,
+#info-item .container-fluid #item-content .card .product-content #size-item .btn.active,
+#info-item .container-fluid #item-content .card .product-content #size-item .btn.show,
+#info-item .container-fluid #item-content .card .product-content #size-item .btn:first-child:active,
+#info-item .container-fluid #item-content .card .product-content #size-item :not(.btn-check) + .btn:active {
+  background-color: rgba(133, 114, 46, 0.462);
+  color: #f7f7f7;
+  border: none;
+}
+#info-item .container-fluid #item-content .card .product-content #size-item label {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#info-item .container-fluid #item-content .card .product-content #size-item label:hover {
+  background: #85722f;
+  color: white;
+}
+#info-item .container-fluid #item-content .card .product-content .select-value {
+  margin: 10px 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+#info-item .container-fluid #item-content .card .product-content .select-value input {
+  border: solid 1px #85722f;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#info-item .container-fluid #item-content .card .product-content .select-value input:hover {
+  background: #85722f;
+  color: #f7f7f7;
+}
+#info-item .container-fluid #item-content .card .product-content #btn-buy button {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  background: #85722f;
+  padding: 10px 40px;
+  border: solid 1px transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#info-item .container-fluid #item-content .card .product-content #btn-buy button:hover {
+  background: rgba(133, 114, 46, 0.462);
+  opacity: 2;
+}
+#info-item .container-fluid #hot-item .item-hot-0 {
+  animation: pop-up 1s;
+}
+#info-item .container-fluid #hot-item .item-hot-1 {
+  animation: pop-up 2s;
+}
+#info-item .container-fluid #hot-item .item-hot-2 {
+  animation: pop-up 3s;
+}
+#info-item .container-fluid #hot-item .item-hot-3 {
+  animation: pop-up 4s;
+}
+#info-item .container-fluid #hot-item .item-hot-4 {
+  animation: pop-up 5s;
+}
+#info-item .container-fluid #hot-item .card {
+  padding: 20px;
+  border: none;
+}
+#info-item .container-fluid #hot-item .card .row-items {
+  display: flex;
+}
+#info-item .container-fluid #hot-item .card .row-items .card {
+  box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+  -webkit-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+  -moz-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+  padding: 30px;
+}
+#info-item .container-fluid #hot-item .card .row-items .card button {
+  font-size: 10px;
+  font-weight: 400;
+  color: #fff;
+  background: #85722f;
+  padding: 10px 30px;
+  border: solid 1px transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#info-item .container-fluid #hot-item .card .row-items .card button:hover {
+  background: rgba(133, 114, 46, 0.462);
+  opacity: 2;
+}
+
+@keyframes pop-up {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 992px) {
+  #info-item .container-fluid #item-content .card .product-content .item-description {
+    font-size: 10px;
+  }
+  #info-item .container-fluid #item-content .card .product-content #size-item {
+    width: 100%;
+  }
+  #info-item .container-fluid #item-content .card .product-content #size-item label {
+    font-size: 10px;
+  }
+  #info-item .container-fluid #item-content .card .product-content #btn-buy button {
+    font-size: 10px;
+  }
+  #info-item .container-fluid #hot-item .card .row-items .card {
+    font-size: 7px;
+  }
+  #info-item .container-fluid #hot-item .card .row-items .card h5 {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  #info-item .container-fluid #hot-item .card .row-items .card .hot-item-btm h4 {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  #info-item .container-fluid #hot-item .card .row-items .card .hot-item-btm button {
+    font-size: 7px;
+    padding: 1px 3px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #info-item .container-fluid #item-content .card {
+    flex-direction: column;
+  }
+  #info-item .container-fluid #item-content .card .product-content h2 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  #info-item .container-fluid #item-content .card .product-content .item-description {
+    font-size: 10px;
+  }
+  #info-item .container-fluid #item-content .card .product-content a.show1 {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  #info-item .container-fluid #item-content .card .product-content h3 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  #info-item .container-fluid #item-content .card .product-content #size-item {
+    margin: 0;
+    width: 100%;
+  }
+  #info-item .container-fluid #item-content .card .product-content #size-item label {
+    font-size: 7px;
+  }
+  #info-item .container-fluid #item-content .card .product-content a.show2 {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  #info-item .container-fluid #item-content .card .product-content #btn-buy button {
+    font-size: 7px;
+  }
+  #info-item .container-fluid #hot-item .card .row-items {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #info-item .container-fluid #hot-item .card .row-items .card {
+    font-size: 7px;
+  }
+  #info-item .container-fluid #hot-item .card .row-items .card h5 {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  #info-item .container-fluid #hot-item .card .row-items .card .hot-item-btm h4 {
+    font-size: 10px;
+    font-weight: bold;
+  }
+  #info-item .container-fluid #hot-item .card .row-items .card .hot-item-btm button {
+    font-size: 7px;
+    padding: 1px 3px;
+  }
+}/*# sourceMappingURL=detail.css.map */
