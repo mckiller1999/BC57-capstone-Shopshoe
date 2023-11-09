@@ -123,10 +123,11 @@ header {
   }
 }
 .product {
-  background-image: linear-gradient($c0-bg-light, $c1-bg-warning);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: $c0-bg-light;
+  
+  h1{
+    padding-bottom: 10px;
+}
   .container {
     .product-list {
       @for $i from 0 to 10 {
@@ -136,10 +137,18 @@ header {
       }
       .item {
         .card.item-content {
-          box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
-          -webkit-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
-          -moz-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+          //box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+          
+
+          margin: 20px 10px;
+                    
+          background: $c0-bg-white;
+          img{
+            padding: 30px 30px 0;
+        }
           .card-body {
+            text-align: left;
+            background: $c0-bg-light;
             .item-title {
               .card-title {
                 font-size: $fz-2xl;
@@ -150,7 +159,7 @@ header {
               justify-content: space-evenly;
               align-items: center;
               .item-price {
-                font-size: $fz-3xl;
+                font-size: $fz-2xl;
                 border: solid 1px transparent;
                 padding: 10px 30px;
                 width: 50%;

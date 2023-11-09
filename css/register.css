@@ -23,8 +23,7 @@
 .register__body .register__img img {
   width: 100%;
   max-width: 750px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   min-height: 100%;
 }
 @media screen and (max-width: 1200px) {
@@ -60,12 +59,6 @@
     width: 80%;
   }
 }
-@media screen and (max-width: 501px) {
-  .register__body .register__content {
-    margin: 0 auto;
-    width: 90%;
-  }
-}
 @media screen and (max-width: 776px) {
   .register__body .register__content h1 {
     margin-left: 60px;
@@ -86,6 +79,24 @@
   .register__body .register__content .register__form form .form__content {
     margin: 0 auto;
     width: 50%;
+  }
+}
+@media screen and (max-width: 740px) {
+  .register__body .register__content .register__form form .form__content {
+    margin: 0 auto;
+    width: 55%;
+  }
+}
+@media screen and (max-width: 660px) {
+  .register__body .register__content .register__form form .form__content {
+    margin: 0 auto;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 501px) {
+  .register__body .register__content .register__form form .form__content {
+    margin: 0 auto;
+    width: 85%;
   }
 }
 @media screen and (max-width: 1357px) {
@@ -142,6 +153,11 @@
     right: -100px;
   }
 }
+@media screen and (max-width: 660px) {
+  .register__body .register__content .register__form form .form__content .form-left .form-input #icon-pass {
+    right: -70px;
+  }
+}
 @media screen and (max-width: 600px) {
   .register__body .register__content .register__form form .form__content .form-left .form-input #icon-pass {
     right: -100px;
@@ -149,7 +165,7 @@
 }
 @media screen and (max-width: 500px) {
   .register__body .register__content .register__form form .form__content .form-left .form-input #icon-pass {
-    right: -130px;
+    right: -50px;
   }
 }
 .register__body .register__content .register__form form .form__content .form-left .input-pass {
@@ -206,6 +222,11 @@
 @media screen and (max-width: 776px) {
   .register__body .register__content .register__form form .submit button {
     margin-left: 60px;
+  }
+}
+@media screen and (max-width: 501px) {
+  .register__body .register__content .register__form form .submit button {
+    margin-left: 30px;
   }
 }
 .register__body .register__content .register__form form .submit button:hover {

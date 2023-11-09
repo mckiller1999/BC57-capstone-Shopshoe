@@ -121,10 +121,10 @@ header .container .title-header a:hover {
 }
 
 .product {
-  background-image: linear-gradient(#fff, #85722f);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: #fff;
+}
+.product h1 {
+  padding-bottom: 10px;
 }
 .product .container .product-list .item-0 {
   animation: fade-down 0.1s;
@@ -157,9 +157,15 @@ header .container .title-header a:hover {
   animation: fade-down 9.1s;
 }
 .product .container .product-list .item .card.item-content {
-  box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
-  -webkit-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
-  -moz-box-shadow: 5px 2px 12px 5px rgba(166, 166, 166, 0.75);
+  margin: 20px 10px;
+  background: #f7f7f7;
+}
+.product .container .product-list .item .card.item-content img {
+  padding: 30px 30px 0;
+}
+.product .container .product-list .item .card.item-content .card-body {
+  text-align: left;
+  background: #fff;
 }
 .product .container .product-list .item .card.item-content .card-body .item-title .card-title {
   font-size: 20px;
@@ -170,7 +176,7 @@ header .container .title-header a:hover {
   align-items: center;
 }
 .product .container .product-list .item .card.item-content .card-body .item-info .item-price {
-  font-size: 30px;
+  font-size: 20px;
   border: solid 1px transparent;
   padding: 10px 30px;
   width: 50%;

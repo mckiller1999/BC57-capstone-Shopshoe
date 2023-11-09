@@ -32,6 +32,7 @@
   .register__content {
     margin: auto;
     padding-right: 50px;
+    
     @media screen and (max-width: 1354px) {
       padding-right: 0;
     }
@@ -43,10 +44,7 @@
       margin: 0 auto;
       width: 80%;
     }
-    @media screen and (max-width: 501px) {
-      margin: 0 auto;
-      width: 90%;
-    }
+    
 
     h1 {
       // color:  $c1-text-warning;
@@ -61,6 +59,7 @@
         .form__content {
           display: flex;
           justify-content: center;
+          
           @media screen and (max-width: 1354px) {
             display: block;
             width: 50%;
@@ -69,6 +68,18 @@
           @media screen and (max-width: 776px) {
             margin: 0 auto;
             width: 50%;
+          }
+          @media screen and (max-width: 740px) {
+            margin: 0 auto;
+            width: 55%;
+          }
+          @media screen and (max-width: 660px) {
+            margin: 0 auto;
+            width: 60%;
+          }
+          @media screen and (max-width: 501px) {
+            margin: 0 auto;
+            width: 85%;
           }
 
           .form-left {
@@ -111,11 +122,14 @@
                 @media screen and (max-width: 700px) {
                   right: -100px;
                 }
+                @media screen and (max-width: 660px) {
+                  right: -70px;
+                }
                 @media screen and (max-width: 600px) {
                   right: -100px;
                 }
                 @media screen and (max-width: 500px) {
-                  right: -130px;
+                  right: -50px;
                 }
               }
             }
@@ -172,6 +186,9 @@
             }
             @media screen and (max-width: 776px) {
               margin-left: 60px;
+            }
+            @media screen and (max-width: 501px) {
+              margin-left: 30px;
             }
             &:hover {
               background-color: #85722f6f;

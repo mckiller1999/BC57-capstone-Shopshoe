@@ -8,7 +8,7 @@ function createItem(arrItem) {
       <div id=${item.id} class="item item-${
       item.id
     } col-lg-4 col-md-6 col-sm-12 " >
-            <div class="card item-content m-3 " >
+            <div class="card item-content" >
                 <img src=${item.image} class="card-img-top" alt="img-item">
                 <div class="card-body">
                     <div class="item-title">
@@ -58,11 +58,11 @@ function createFormItems(data) {
             <p class = 'item-description'>
               ${data.description}
             </p>
-            <a class='show1'>Show more</a>
+            
             <h3>Available Size</h3>
             <div id="size-item">;
   </div>
-  <a class='show2'>Show more</a>
+  <a class='show2'><u>More size</u></a>
             <h3 id="price" class='mt-2'>${data.price}$</h3>
             <div class="select-value">
               <input class="btn " type="button" id='add' value="+" />
@@ -83,16 +83,16 @@ function createFormItems(data) {
   getSize(data.size);
   //console.log(getSize(data.size));
 
-  document.querySelector(".show1").onclick = function () {
-    var info = document.querySelector(".item-description");
-    if (info.style.height === "80px") {
-      info.style.removeProperty("overflow");
-      info.style.height = "150px";
-    } else {
-      info.style.height = "80px";
-      info.style.overflow = "hidden";
-    }
-  };
+  // document.querySelector(".show1").onclick = function () {
+  //   var info = document.querySelector(".item-description");
+  //   if (info.style.height === "80px") {
+  //     info.style.removeProperty("overflow");
+  //     info.style.height = "150px";
+  //   } else {
+  //     info.style.height = "80px";
+  //     info.style.overflow = "hidden";
+  //   }
+  // };
   document.querySelector(".show2").onclick = function () {
     var info = document.querySelector("#size-item");
     if (info.style.height === "50px") {
