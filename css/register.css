@@ -23,7 +23,8 @@
 .register__body .register__img img {
   width: 100%;
   max-width: 750px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   min-height: 100%;
 }
 @media screen and (max-width: 1200px) {

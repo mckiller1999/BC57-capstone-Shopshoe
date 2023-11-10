@@ -178,7 +178,7 @@
     font-size: 10px;
   }
   #info-item .container-fluid #item-content .card .product-content #btn-buy button {
-    font-size: 10px;
+    font-size: 16px;
   }
   #info-item .container-fluid #hot-item .card .row-items .card {
     font-size: 7px;
@@ -187,13 +187,16 @@
     font-size: 10px;
     font-weight: bold;
   }
+  #info-item .container-fluid #hot-item .card .row-items .card .hot-item-btm {
+    flex-direction: column;
+  }
   #info-item .container-fluid #hot-item .card .row-items .card .hot-item-btm h4 {
-    font-size: 10px;
+    font-size: 16px;
     font-weight: bold;
   }
   #info-item .container-fluid #hot-item .card .row-items .card .hot-item-btm button {
-    font-size: 7px;
-    padding: 1px 3px;
+    font-size: 10px;
+    padding: 1px 20px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -242,11 +245,11 @@
     font-weight: bold;
   }
   #info-item .container-fluid #hot-item .card .row-items .card .hot-item-btm h4 {
-    font-size: 10px;
+    font-size: 16px;
     font-weight: bold;
   }
   #info-item .container-fluid #hot-item .card .row-items .card .hot-item-btm button {
     font-size: 7px;
-    padding: 1px 3px;
+    padding: 10px 20px;
   }
 }/*# sourceMappingURL=detail.css.map */
