@@ -179,6 +179,7 @@
   }
 }
 //responsive---------------------
+
 @media screen and (max-width: 992px) {
   #info-item {
     .container-fluid {
@@ -187,7 +188,7 @@
           .product-content {
             .item-description {
               font-size: $fz-small;
-              height: 80px;
+              height: 50px;
             }
             a.show1 {
               display: block;

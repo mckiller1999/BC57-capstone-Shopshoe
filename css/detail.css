@@ -172,7 +172,7 @@
 @media screen and (max-width: 992px) {
   #info-item .container-fluid #item-content .card .product-content .item-description {
     font-size: 10px;
-    height: 80px;
+    height: 50px;
   }
   #info-item .container-fluid #item-content .card .product-content a.show1 {
     display: block;
