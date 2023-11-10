@@ -41,11 +41,13 @@
   font-weight: bold;
   cursor: pointer;
   color: black;
-  text-decoration: none;
+}
+#info-item .container-fluid #item-content .card .product-content .show1 {
+  display: none;
 }
 #info-item .container-fluid #item-content .card .product-content .item-description {
   width: 90%;
-  height: 80px;
+  height: 170px;
   overflow: hidden;
 }
 #info-item .container-fluid #item-content .card .product-content #size-item {
@@ -170,6 +172,10 @@
 @media screen and (max-width: 992px) {
   #info-item .container-fluid #item-content .card .product-content .item-description {
     font-size: 10px;
+    height: 80px;
+  }
+  #info-item .container-fluid #item-content .card .product-content a.show1 {
+    display: block;
   }
   #info-item .container-fluid #item-content .card .product-content #size-item {
     width: 100%;

@@ -58,11 +58,11 @@ function createFormItems(data) {
             <p class = 'item-description'>
               ${data.description}
             </p>
-            
+            <a class='show1'>More info</a>
             <h3>Available Size</h3>
             <div id="size-item">;
   </div>
-  <a class='show2'><u>More size</u></a>
+  <a class='show2'>More size</a>
             <h3 id="price" class='mt-2'>${data.price}$</h3>
             <div class="select-value">
               <input class="btn " type="button" id='add' value="+" />
@@ -83,21 +83,21 @@ function createFormItems(data) {
   getSize(data.size);
   //console.log(getSize(data.size));
 
-  // document.querySelector(".show1").onclick = function () {
-  //   var info = document.querySelector(".item-description");
-  //   if (info.style.height === "80px") {
-  //     info.style.removeProperty("overflow");
-  //     info.style.height = "150px";
-  //   } else {
-  //     info.style.height = "80px";
-  //     info.style.overflow = "hidden";
-  //   }
-  // };
+  document.querySelector(".show1").onclick = function () {
+    var info = document.querySelector(".item-description");
+    if (info.style.height === "50px") {
+      info.style.removeProperty("overflow");
+      info.style.height = "120px";
+    } else {
+      info.style.height = "50px";
+      info.style.overflow = "hidden";
+    }
+  };
   document.querySelector(".show2").onclick = function () {
     var info = document.querySelector("#size-item");
     if (info.style.height === "50px") {
       info.style.removeProperty("overflow");
-      info.style.height = "120px";
+      info.style.height = "150px";
     } else {
       info.style.height = "50px";
       info.style.overflow = "hidden";
